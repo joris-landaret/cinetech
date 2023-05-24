@@ -18,6 +18,7 @@ $router->map('GET', '/env', function () {
 
 $router->map('GET', '/movies', function () {
     echo 'Bienvenue';
+    require_once 'src/view/movies.php';
 }, 'display-movies');
 
 $match = $router->match();
