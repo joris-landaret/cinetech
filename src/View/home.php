@@ -9,21 +9,12 @@
 </head>
 
 <body>
-    <header>
-        <a href="">Acceuil</a>
-        <a href="">films</a>
-        <a href="">séries</a>
-        <a href=""></a>
-
-    </header>
-
+    <?php
+    require_once 'src/view/header.php';
+    ?>
     <section>
 
     </section>
-
-    <footer>
-
-    </footer>
 </body>
 
 </html>
