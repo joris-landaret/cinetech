@@ -8,6 +8,7 @@ $router = new AltoRouter();
 
 $router->map('GET', '/', function () {
     echo 'Bienvenu sur l\'accueil';
+    require_once 'src/View/home.php';
 }, 'home');
 
 $router->map('GET', '/env', function () {
