@@ -7,7 +7,7 @@ require_once 'vendor/autoload.php';
 $router = new AltoRouter();
 
 $router->map('GET', '/', function () {
-    echo 'Bienvenu sur l\'accueil';
+    echo 'Bienvenue sur l\'accueil';
     require_once 'src/View/home.php';
 }, 'home');
 
@@ -15,6 +15,10 @@ $router->map('GET', '/env', function () {
     $authController = new AuthController;
     $authController->env();
 }, 'view');
+
+$router->map('GET', '/movies', function () {
+    echo 'Bienvenue';
+}, 'display-movies');
 
 $match = $router->match();
 
