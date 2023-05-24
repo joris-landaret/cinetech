@@ -1,5 +1,7 @@
 <?php
 
+use App\Controller\AuthController;
+
 require_once 'vendor/autoload.php';
 
 $router = new AltoRouter();
@@ -7,6 +9,11 @@ $router = new AltoRouter();
 $router->map('GET', '/', function () {
     echo 'Bienvenu sur l\'accueil';
 }, 'home');
+
+$router->map('GET', '/env', function () {
+    $authController = new AuthController;
+    $authController->env();
+}, 'view');
 
 $match = $router->match();
 
