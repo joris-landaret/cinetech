@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
+    <script defer src="style/home.js"></script>
     <title>Cinetech</title>
 </head>
 
@@ -13,6 +14,7 @@
     <?php
     require_once 'src/view/header.php';
     ?>
+    <h1>Films les mieux notés</h1>
     <main id="main">
         <div class="movie">
             <img src="https://upload.wikimedia.org/wikipedia/commons/b/be/Film_strip.jpg" alt="image">
