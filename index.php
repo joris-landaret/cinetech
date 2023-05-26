@@ -19,6 +19,10 @@ $router->map('GET', '/movies', function () {
     require_once 'src/view/movies.php';
 }, 'display-movies');
 
+$router->map('GET', '/tv-series', function () {
+    require_once 'src/view/tv-series.php';
+}, 'display-tv-series');
+
 $match = $router->match();
 
 if (is_array($match) && is_callable($match['target'])) {

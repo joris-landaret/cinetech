@@ -1,10 +1,10 @@
 // Somme URL
 const fr_url = 'language=fr-FR';
 const base_url = ' https://api.themoviedb.org/3/';
-const movies_url = 'movie/popular';
+const tv_url = 'tv/popular';
 const page_url = 'page=';
 const imageBase_url ='https://image.tmdb.org/t/p/w500';
-const search_url = 'https://api.themoviedb.org/3/search/movie?'
+const search_url = 'https://api.themoviedb.org/3/search/tv?'
 const key = 'api_key=b788cc72df375c80e5b1d9b0483059ac'
 
 // select element
@@ -13,7 +13,7 @@ const form = document.querySelector("#form");
 const search = document.querySelector("#search");
 
 // somme function
-async function getMovies(url) {
+async function getTv(url) {
     const options = {
         method: 'GET',
         headers: {
@@ -40,7 +40,7 @@ async function getMovies(url) {
 		</div>
 
         <div class="movie-info">
-            <h3>${movie.title}</h3>
+            <h3>${movie.name}</h3>
             <span class="${getColor(movie.vote_average)}">${movie.vote_average}</span>
         </div>
 
@@ -67,17 +67,17 @@ function getColor(vote) {
 }
 
 //
-getMovies(base_url+movies_url+'?'+page_url+'1&'+fr_url+'&'+key);
+getTv(base_url+tv_url+'?'+page_url+'1&'+fr_url+'&'+key);
 
 form.addEventListener('submit', (e) => {
 	e.preventDefault();
 
 	if(!search.value) {
 		console.log('non');
-		getMovies(base_url+movies_url+'?'+page_url+'1&'+fr_url);
+		geTtv(base_url+tv_url+'?'+page_url+'1&'+fr_url);
 	}
 	else {
-		getMovies(search_url+'query='+search.value)
+		getTv(search_url+'query='+search.value)
 	console.log(search.value);
 	}
 });
