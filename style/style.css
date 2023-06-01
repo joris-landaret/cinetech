@@ -26,9 +26,15 @@ header{
 form {
     margin: 0;
 }
+
 a{
     text-decoration: none;
     color: #eee;
+}
+
+.button{
+    width: 2%;
+    height: 30px;
 }
 
 .search{
