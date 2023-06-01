@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
     <script defer src="style/movie.js"></script>
+    <script defer src="style/pagination.js"></script>
     <title>Document</title>
 </head>
 
